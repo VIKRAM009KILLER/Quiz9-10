@@ -1,0 +1,69 @@
+<DOCTPE html>
+<html>
+    <head>
+        <title>Quiz</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <link rel="stylesheet" type="text/css" href="allstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <body onload="quest()" style="background-color: white;">
+        <div id="head">Quiz</div>
+            <div id="dis" style="padding: 10px; font-size: 20px;"></div>
+            <div id="cor" style="padding: 10px; font-size: 20px;"></div>
+            <div id="cd" class="fixed-top" style="text-align: center;">0:60 sec</div>
+        <div class= "container"><br><br>
+
+            <q id="q1"></q><br><br>
+            <input id="r11" type="radio" name="q1">
+            <label id="opt11" for="opt1"></label><br>
+            <input id="r12" type="radio" name="q1">
+            <label id="opt12" for="opt2"></label><br> 
+            <input id="r13" type="radio" name="q1">
+            <label id="opt13" for="opt3"></label><br><br>
+
+            <q id="q2"></q><br><br>
+            <input  id="r21" type="radio" name="q2">
+            <label id="opt21" for="op21"></label><br>
+            <input id="r22" type="radio" name="q2">
+            <label id="opt22" for="op22"></label><br>
+            <input id="r23" type="radio" name="q2">
+            <label id="opt23" for="op23"></label><br><br>
+
+            <q id="q3"></q><br><br>
+            <input id="r31" type="radio" name="q3">
+            <label id="opt31" for="op31"></label><br>
+            <input id="r32" type="radio" name="q3">
+            <label id="opt32" for="op32"></label><br> 
+            <input id="r33" type="radio" name="q3">
+            <label id="opt33" for="op33"></label><br><br>
+
+            <q id="q4"></q><br><br>
+            <input id="r41" type="radio" name="q4">
+            <label id="opt41" for="op41"></label><br>
+            <input id="r42" type="radio" name="q4">
+            <label id="opt42" for="op42"></label><br> 
+            <input id="r43" type="radio" name="q4">
+            <label id="opt43" for="op43"></label><br><br>
+
+
+        </div>
+        <div id="result" style="padding: 10px; font-size: 20px; text-align: center;"></div>
+        <button onclick="submit(); rem()" id="submit" type="button">Submit</button>
+        </div>
+    </body>
+
+    <script>
+        var uname = localStorage.getItem("user")
+        
+
+        document.getElementById("dis").innerHTML = " Logged in as " + uname
+        
+    </script>
+    <script src="questions.js"></script>
+</html>
